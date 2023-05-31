@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     .body{
+        display: inline-block;
+        margin-top: 10%;
+        margin-left: 32%;
+        width: 37%;
+        height: 375px;
+        border-style: solid;
+        border-color: red;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .button{
+        background-color: rgb(5, 245, 17);
+    }
+
+    .input{
+        position: relative;
+        height: 17px;
+        width: 480px;
+    }
+
+</style>
+<body class = "body">
+ <center>
+     <h1 style="background-color: aqua;color: brown; height: 80px;">Calculator</h1>
+     <input type="text" id="calculate" name="calculate" class="input">
+     <br><br>
+      <div class="button">
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add(1)">1</button>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add(2)">2</button>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add(3)">3</button>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add(4)">4</button>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add(5)">5</button>
+        <br><br>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add(6)">6</button>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add(7)">7</button>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add(8)">8</button>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add(9)">9</button>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add(0)">0</button>
+        <br><br>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add('+')">+</button>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add('-')">-</button>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add('*')">*</button>
+        <button style="height: 35px; width: 35px; font-size: large" onclick="AT_add('/')">/</button>
+        <br><br>
+        <button style="height: 35px; width: 75px; font-size: large;background-color: blue;color: greenyellow;" onclick="equal()">=</button>
+        <button style="height: 35px; width: 75px; font-size: large;background-color: red;color: violet;" onclick="del()">Delete</button>
+        <button style="height: 35px; width: 75px; font-size: large;background-color: brown;color: cyan;" onclick="cancel()">Cancel</button>
+        <br><br>
+      </div>
+  </center>
+
+  
+    <script>
+       var val = document.getElementById("calculate");
+       function AT_add(v){
+        val.value += v;
+       }
+        
+       function cancel(){
+        val.value = "";
+       }
+
+       function equal(){
+        val.value = eval(val.value);
+       }
+
+       function del(){
+        val.value=val.value.substr(0,val.value.length-1); 
+       }
+
+    </script>
+
+</body>
+</html>
